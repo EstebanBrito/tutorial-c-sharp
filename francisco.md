@@ -11,6 +11,8 @@
 4. Crear el archivo **francisco.md**.
 5. git add francisco.md.
 6. git commit -m "Cree mi branch, el archivo francisco.md".
-7. git pull origin/develop.
-8. git push. 
-9. git commit -m "Añadí más texto al archivo".
+7. git checkout develop.
+8. git pull.
+9. git checkout francisco.
+10. git push. 
+11. git commit -m "Añadí más texto al archivo".
