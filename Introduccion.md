@@ -9,7 +9,6 @@ C# es un lenguaje orientado a objetos, pero igual está orientado a componentes,
 * Limpieza automática de memoria, reclamando almacenamiento ocupado por objetos no usados.
 * Tipos nulos que protegen de variables que no apunten a objetos almacenados.
 * Manejo de excepciones como una manera estructurada y extensible para la detección de errores.
-* Exception handling provides a structured and extensible approach to error detection and recovery.
 * Expresiones lambda que soportan técnicas propias del paradigma de programación funcional.
 * La sintáxis LINQ (del inglés, *Language Integrated Query*) crea un patrón común para trabajar con datos de cualquier fuente.
 * Soporte para operaciones asíncronas y desarrollo de sistemas distribuidos.
@@ -24,7 +23,7 @@ Hay muchas razones por las cuales C# es popular. Algunas de estas razones son:
 * Fácil de usar: C# es un lenguaje de alto nivel similar a otros lenguaje populares como C, C++ o Java, por lo que aprender C# se vuelve una tarea sencilla para programadores con experiencia.
 * C# es ampliamente usado par el desarrollo de aplicaciones web y aplicaciones de escritorio, especialemente para entornos Windows o para aplicaciones de Microsoft en general.
 * La comunidad de C# es extensa, por lo que hay un soporte amplio para nuevas herramientas y artefactos de código. Además, esto asegura que C# seguirá vivo por bastante tiempo.
-* C# es también uno de los lenguajes más usados para el desarrollo de videojuegos, principalmente por características como la recolacción automática de basura, interfaces, orientación a objetos, etc.
+* C# es también uno de los lenguajes más usados para el desarrollo de videojuegos, principalmente por características como la recolección automática de basura, interfaces, orientación a objetos, etc.
 
 ## Tu primer programa
 
@@ -43,8 +42,6 @@ namespace AppHolaMundo
   
             // Imprimir "Hola, Mundo"
             Console.WriteLine("Hola, Mundo");
-            // Pide a C# esperar a que se presione una tecla
-            // Evita que la consola se cierre automáticamente
             Console.ReadKey();
         }
     }
@@ -54,7 +51,7 @@ namespace AppHolaMundo
 ### Salida
 
 ```bash
-$ Hola, Mundo
+Hola, Mundo
 ```
 
 ### Explicación del código
@@ -80,7 +77,7 @@ Comentarios multilínea
 
 #### System
 
-"System" es una palabra reservada que incluye el espacio de nombres "System" en el programa. Un espacio de nombres hace referencia a una colección de clases y otros recursos programáticos existentes. En este caso, nuestro programa existe en el espacio "AppHolaMundo", la cual contiene la clase HolaMundo (y otros elementos que incluyan la línea "namespace AppHolaMundo).
+"System" es una palabra reservada que incluye el espacio de nombres "System" en el programa. Un espacio de nombres hace referencia a una colección de clases y otros recursos programáticos existentes. En este caso, nuestro programa existe en el espacio "AppHolaMundo", el cual contiene la clase HolaMundo (y otros elementos que incluyan la línea "namespace AppHolaMundo).
 
 #### Clases
 
@@ -98,7 +95,7 @@ Un programa en C# también necesita una función Main que funja como su punto in
 Console es un objeto perteneciente al espacio "System". Posee funciones que permiten interactuar con la consola del sistema (como cmd, en el caso de Windows). Específicamente, se usan dos funciones:
 
 1. Console.WriteLine(), que imprime en la consola el mensaje especificado.
-2. Console.ReadKey(), que hace al programa esperar a que una tecla se presione. Esto es puesto al final de ciertos programas basados en consola para evitar que ésta se cierre automáticamente una vez se hayan ejecutados todas las instrucciones que la componen.
+2. Console.ReadKey(), que hace al programa esperar a que una tecla se presione. Se encuentra al final de ciertos programas basados en consola para evitar que ésta se cierre automáticamente una vez se hayan ejecutados todas las instrucciones requeridas.
 
 Cabe resaltar el uso de puntos y comas (;) al final de las líneas de código.
 
@@ -118,4 +115,4 @@ C# es usado para el desarrollo de varios sistemas, entre ellos:
 * Aplicaciones y servicios web
 * Aplicaciones de escritorio
 * Aplicaciones de Microsoft a gran escala
-* Videojueos en Unity
+* Videojuegos (especialmente el el software Unity)
