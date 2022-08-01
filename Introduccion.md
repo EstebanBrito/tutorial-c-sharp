@@ -72,7 +72,7 @@ Los comentarios multilínea se declaran así:
 
 ```c#
 /* 
-Multi line comments
+Comentarios multilínea
 ...
 ...
 */
@@ -102,3 +102,20 @@ Console es un objeto perteneciente al espacio "System". Posee funciones que perm
 
 Cabe resaltar el uso de puntos y comas (;) al final de las líneas de código.
 
+## Ventajas de C#
+
+C# es muy eficiente en su manejo del sistema. Toda la basura es recolectada automáticamente y no existen problemas de fuga de memoria. Además, el costo de manterner código en C# es menor que en otros lenguajes.   
+El código de C# es compilado a un lenguaje intermedio, independientemente del sistema operativo o la arquitectura de la plataforma objetivo. Esto significa que una base de código hecha en C# puede funcionar en diferentes plataformas.
+
+## Desventajas de C#
+
+Sin embargo, C# también tiene ciertos puntos débiles. En primera instancia, depende mucho del framework .Net. Adicionalmente, C# es relativamente lento en tiempo de ejecución y los programas necesitan compilarse cada vez que se incluyen cambios en el código.
+
+## Aplicaciones de C#
+
+C# es usado para el desarrollo de varios sistemas, entre ellos:
+
+* Aplicaciones y servicios web
+* Aplicaciones de escritorio
+* Aplicaciones de Microsoft a gran escala
+* Videojueos en Unity
