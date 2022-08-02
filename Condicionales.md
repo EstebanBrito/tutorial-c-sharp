@@ -24,7 +24,6 @@ namespace EjemploIf
             {
                 Console.WriteLine("Juan NO puede ir a Bandidas");
             }
-
         }
     }
 }
@@ -53,7 +52,7 @@ namespace EjemploIf
     }
 }
 ```
-# Condicional if else
+## Condicional if else
 El else es una adición al if, este ejecuta un bloque de código si la condición dió como resultado false.
 
 ```C#
@@ -63,7 +62,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EjemploIf
+namespace EjemploIfElse
 {
     public class Program
     {
@@ -93,7 +92,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EjemploIf
+namespace EjemploIfElse
 {
     public class Program
     {
@@ -108,3 +107,34 @@ namespace EjemploIf
     }
 }
 ```
+
+## Condicional else if
+El condicional else if se usa cuando la primera condición resulta ser false, pero se quiere evaluar nuevamenta dicha condición. 
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EjemploIfElse
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            int valor1=10, valor2=10;
+
+            if (valor1>valor2){
+                Console.WriteLine(val1+" es mayor a "+val2);
+            }else if(valor1<valor2){
+                 Console.WriteLine(val2+" es mayor a "+val1);
+            }else{
+                 Console.WriteLine(val1+" es igual a "+val2);
+            }
+        }
+    }
+}
+```
+En el anterior ejemplo tanto valor 1 como valor 2 tienen el mismo valor (10). En el primer if la condición se evalua como false (por que valor1 no es mayor a valor2), por lo tanto pasa al siguiente else, este al tener otro if tiene que volver a evaluar la condición y da como resultado false (valor 1 no es menor que valor2), finalmente pasa al siguiente else y la consola imprime "10 es igual a 10".
