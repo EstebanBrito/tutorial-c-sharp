@@ -138,3 +138,6 @@ namespace EjemploIfElse
 }
 ```
 En el anterior ejemplo tanto valor 1 como valor 2 tienen el mismo valor (10). En el primer if la condición se evalua como false (por que valor1 no es mayor a valor2), por lo tanto pasa al siguiente else, este al tener otro if tiene que volver a evaluar la condición y da como resultado false (valor 1 no es menor que valor2), finalmente pasa al siguiente else y la consola imprime "10 es igual a 10".
+
+# Referencias 
+Información recuperada de [w3schools cs conditions](https://www.w3schools.com/cs/cs_conditions.php)
