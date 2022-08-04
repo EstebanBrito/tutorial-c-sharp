@@ -12,9 +12,9 @@ Console.WriteLine("Hola Mundo");
 ```
 ### Empleando funciones
 ```csharp
-void Print Hello World()
+void PrintHelloWorld()
 {
-    Console.WriteLine("H"ola Mundo");
+    Console.WriteLine("Hola Mundo");
 }
 PrintHelloWorld();
 PrintHelloWorld();
