@@ -56,8 +56,36 @@ void Suma(int a, int b)
 En el ejemplo anterior se hace uso de los parámetros a y b, como bien se puede observar son de tipo entero, por lo cual la función no funcionara si hacemos uso de argumentos con valor decimal. De igual forma están separados por una coma entre cada parámetro, debido a que la sintaxis lo demanda.
 
 ## ¿Cómo regresar un tipo de dato?
+Para que una función retorne un valor se debe de cambiar la palabra clave `void` por un tipo de dato, posteriormente se debe de anexar la palabra clave `return` seguida de una variable o valor a retornar.
+### Ejemplo
+```csharp
+int Suma(int a, int b)
+{
+    int sum = a + b;
+    return sum;
+}
+Console.WriteLine("La suma es igual a: {0}", Suma(2,2));
+```
+El resultado que obtendríamos del ejemplo sería: 
+
+`La suma es igual a: 4` 
 
 ## ¿Qué es una firma y cuál es su finalidad?
+Las firmas se emplean para diferencia los **Métodos** que creamos para diferentes labores a la hora de trabajar con objetos, puesto que en algunos casos se requerirá menos parámetros para realizar una labor especifico . 
+### Ejemplo
+```csharp
+void InsertPacient(string name,string 2ndname, string lastname, int tel, string address, int zipcode)
+{
+	Insert(name,2ndname,lastname, tel, address, zipcode);
+}
+void InserPacient(string name, string lastname, int tel, string address, int zipcode)
+{
+	Insert(name,lastname,tel,address,zipcode);
+}
+```
+En este ejemplo se hace referencia al 
+objeto **Pacient** y se crea un caso hipotético donde se busca insertarlo en una base de datos, en la cual algunos campos son opcionales, como lo son el segundo nombre, puesto que no todos tenemos un segundo nombre.
+
 
 ## ¿Por qué es integral el uso de las funciones?
 Las funciones tienen un propósito más relevante que simplemente ser capaz de reutilizarse para hacer una labor, la funcionalidad de encapsular un bloque de código nos permite optimizar nuestro código, ya que si utilizamos la misma instrucción para realizar una suma, el tiempo de compilación seria notable, cuando uno trabaje con programas sencillo puede no notar este tiempo, pero cuando se trabaja con proyectos más grandes, una suma u operación mal optimizada puede significar un tiempo considerable para realizar una acción. En el siguiente *Ejemplo* se muestra el punto anterior.
