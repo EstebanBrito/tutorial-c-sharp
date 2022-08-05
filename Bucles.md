@@ -131,5 +131,39 @@ namespace BucleFor
     
 }
 ```
+## Bucle foreach
 
+La sentencia de bucle *foreach* enumera los elementos (int,Char,String,float double) de una variable, arreglo, colecciones o listas y ejecuta el bloque de código por cada elemento contado.
 
+SÍNTAXIS:
+```C#
+foreach(tipoDato nombre in array)
+{
+     //bloque de código que se ejecutará
+}
+```
+
+EJEMPLO:
+
+En el siguiente ejemplo se contará la cantidad de números dentro del arreglo de enteros "Numeros" por medio de un *foreach* y posteriormente se imprimirá.
+
+```C#
+using System;
+
+public class Program
+{
+	static void Main(string[] args)
+	{
+		int[] Numeros = { 1, 2, 3, 4, 5 };
+		int ContadorNumeros=0;
+        //el foreach barre todo el arreglo "Numeros" por medio de la variable "Numero" y hace válida la condición por cada elemento del arreglo
+		foreach (int Numero in Numeros)
+		{
+			ContadorNumeros++;	
+		}
+		Console.WriteLine($"se contaron {ContadorNumeros} numeros");
+
+	}
+	
+}
+```
