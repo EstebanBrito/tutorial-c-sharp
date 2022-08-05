@@ -1,4 +1,4 @@
-# **Operaciones Básicas**
+# **Operaciones Básicas en C#**
 
 C# proporciona operadores. Compatibles con tipos incorporados y operaciones básicas, incluyendo los siguientes grupos:
 
