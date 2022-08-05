@@ -167,3 +167,33 @@ public class Program
 	
 }
 ```
+## Instrucción break
+La instrucción *break* se utiliza dentro de una sentencia de bucle para (como su nombre lo indica) **romper** su ejecución, en otras palabras: finaliza el proceso de manera forzosa, dependiendo de una condición previamente establecida.
+
+Como se muestra en el siguiente ejemplo que aumenta el valor de *i* en 1+ por cada iteración y dentro tiene una condicional que indica que si *i* es igual a 6 entonces el bucle se romperá:
+```C#
+for (int i = 0; i < 12; i++) 
+{
+  //
+  if (i == 6) 
+  {
+    break;
+  }
+  Console.WriteLine(i);
+}
+```
+
+## Instrucción continue
+La instrucción *continue* es similar a la instrucción *break*, solo que *continue* no finaliza con las iteraciones del bucle, solo "omite" la iteración en cuestión si la condicional es verdadera.
+
+Como se muestra en el siguiente ejemplo que aumenta el valor de *i* en 1+ por cada iteración y dentro tiene una condicional que indica que si *i* es igual a 6 entonces el bucle omitirá la iteración donde *i* es igual a 6 y seguirá con el bucle:
+```C#
+for (int i = 0; i < 12; i++) 
+{
+  if (i == 6) 
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+}
+```
