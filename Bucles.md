@@ -197,3 +197,54 @@ for (int i = 0; i < 12; i++)
   Console.WriteLine(i);
 }
 ```
+## banderas
+En programación utilizamos variables llamadas *banderas* para marcar cuando una posible situación prevista por el programador es verdadera o falsa, por lo que usualmente se usan variables de tipo booleano para declararlas.
+
+Funciona entre algunos ejemplos para marcar que se ha encontrado cierto elemento al barrer un arreglo o para marcar un error dentro del programa y poder programar una línea de acción para hacer que el código se realinie o como se muestra en el siguiente ejemplo: para que el usuario pueda salir de un bucle aparentemente infinito utilizando un símbolo clave.
+
+EJEMPLO:
+
+En el siguiente ejemplo se hace una sumatoria con 2 números que se preguntan al usuario como strings que posteriormente se convierten en enteros y se suman, el bucle va a repetirse infinitamente hasta que el valor de la *bandera* sea verdadero, lo cual se logra si el usuario al final presiona la tecla z.
+```C#
+using System;
+
+public class Program
+{
+	static void Main(string[] args)
+	{
+		int Num1, Num2, Suma;
+		string cadena = string.Empty;
+		bool Bandera = false;
+
+		do
+		{
+			Console.WriteLine("Sumatoria, ingrese 2 números:)");
+
+			Console.WriteLine("Número 1:");
+			cadena = Console.ReadLine();
+			Console.WriteLine(cadena);
+			
+			Num1 = Convert.ToInt32(cadena);
+
+			Console.WriteLine("Número 2:");
+			cadena = Console.ReadLine();
+			Num2 = Convert.ToInt32(cadena);
+
+
+			Suma = Num1 + Num2;
+			Console.WriteLine($"La suma es igual a {Suma}");
+			Console.WriteLine("presione cualquier tecla para continuar | presione z para terminar");
+			cadena = Console.ReadLine();
+			if (cadena == "z")
+			{
+				Bandera = true;
+			}
+		}
+		while (Bandera == false);
+
+
+	}
+
+	
+}
+```
