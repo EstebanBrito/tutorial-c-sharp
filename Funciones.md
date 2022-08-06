@@ -70,7 +70,11 @@ void Suma(int a, int b)
 En el ejemplo anterior se hace uso de los parámetros a y b, como bien se puede observar son de tipo entero, por lo cual la función no funcionará si hacemos uso de argumentos con valor decimal. De igual forma están separados por una coma entre cada parámetro, debido a que la sintaxis lo demanda.
 
 ## ¿Cómo retornar en una función?
-Una función puede retornar una variedad de elementos, como lo son objetos, tipo de variables, etc. Para retornar un elemento en una variable se debe de cambiar la palabra clave `void` por el tipo de dato que deseamos retornar por ejemplo un `int` le indicaría al compilador que la función debe de retornar un entero. La palabra clave `return` es la que se encarga de regresar el valor que debe de retornar nuestra función, pero es de suma importancia denotar que al momento en que el compilador lee `return` termina la función dejando sin ejecutar los comando posteriores al `return`, de igual forma el `return` debe de retornar el tipo de variable u objeto que se declaró.
+Una función puede retornar una variedad de elementos, como lo son objetos, tipo de variables, etc. Para retornar un elemento en una variable se debe de cambiar la palabra clave `void` por el tipo de dato que deseamos retornar por ejemplo un `int` le indicaría al compilador que la función debe de retornar un entero. La palabra clave `return` es la que se encarga de regresar el valor que debe de retornar nuestra función, pero es de suma importancia denotar los siguientes puntos:
+
+* El momento en el que el compilador lee la línea donde se encuentra el `return` termina la ejecución de la función y regresa al código principal, esto significa que si tenemos comandos delante del `return` estos no se ejecutaran.
+* El tipo de dato a retornar debe de ser el apropiado, por ejemplo, si se retorna un valor flotante en una función que retorna valores enteros, esto implicara un error de compilación a la hora de ejecutar el código.
+
 
 ### Ejemplo
 ```csharp
@@ -87,39 +91,29 @@ La suma es igual a: 4
 ``` 
 
 ## ¿Qué es una firma y cuál es su finalidad?
-Las firmas se emplean para diferencia los **Métodos** que creamos para diferentes labores a la hora de trabajar con objetos, puesto que en algunos casos se requerirá menos parámetros para realizar una labor especifico . 
+Las firmas son un componente de la función que define sus entradas y salidas, con esto términos se hace referencia a los parámetros junto con su tipo y el valor de retorno junto con su tipo. En el siguiente ejemplo se puede notar una función con los siguientes elementos:
+* `int`
+* `multi`
+* `(int a, int b)`
+
+`int` es el componente de la firma que indica que se debe de retornar un valor y este debe de ser entero.
+
+`multi` es el componente de la firma que indica el nombre de la función.
+
+`(int a, int b)` es el componente de la firma que indica que la función tiene parámetros.
+
+
 ### Ejemplo
 ```csharp
-void InsertPacient(string name,string 2ndname, string lastname, int tel, string address, int zipcode)
+int multi(int a, int b)
 {
-	Insert(name,2ndname,lastname, tel, address, zipcode);
-}
-void InserPacient(string name, string lastname, int tel, string address, int zipcode)
-{
-	Insert(name,lastname,tel,address,zipcode);
+    int x = a * b;
+    return x;
 }
 ```
-En este ejemplo se hace referencia al 
-objeto **Pacient** y se crea un caso hipotético donde se busca insertarlo en una base de datos, en la cual algunos campos son opcionales, como lo son el segundo nombre, puesto que no todos tenemos un segundo nombre.
-
 
 ## ¿Por qué es integral el uso de las funciones?
-Las funciones tienen un propósito más relevante que simplemente ser capaz de reutilizarse para hacer una labor, la funcionalidad de encapsular un bloque de código nos permite optimizar nuestro código, ya que si utilizamos la misma instrucción para realizar una suma, el tiempo de compilación seria notable, cuando uno trabaje con programas sencillo puede no notar este tiempo, pero cuando se trabaja con proyectos más grandes, una suma u operación mal optimizada puede significar un tiempo considerable para realizar una acción. En el siguiente *Ejemplo* se muestra el punto anterior.
-## Ejemplo.
-### Sin uso de funciones
-```csharp
-Console.WriteLine("Hola Mundo");
-Console.WriteLine("Hola Mundo");
-Console.WriteLine("Hola Mundo");
-```
-### Empleando funciones
-```csharp
-void PrintHelloWorld()
-{
-    Console.WriteLine("Hola Mundo");
-}
-PrintHelloWorld();
-PrintHelloWorld();
-PrintHelloWorld();
-```
-Si bien no se distingue una diferencia notable a simple vista, mediante el uso de la funciones le estamos comunicando al compilador que haga uso del bloque de código que previamente creamos para realizar la operación, por lo tanto le toma menos tiempo escribir “Hola Mundo", puesto que no tiene la necesidad de ejecutar tres comando en repetidas ocasiones, de igual forma es una forma sencilla de facilitar la lectura del código, debido a que las funciones son explicitas en su naturaleza.
+Existen varias razones por la cual es esencial hacer uso de funciones, pero se resume en los siguientes puntos:
+* **Organización**. Las funciones nos permiten tener un área de trabajo menos amontonada, puesto que las funciones se pueden separar del código principal, permitiéndonos crear pequeñas partes de nuestro programa.
+* **Reusabilidad**. La reusabilidad que las funciones nos aportan es una de las ventajas más notables, debido a que podemos usar una función repetidamente para desarrollar una funcionalidad.
+* **Testear**. Es más sencillo testear un bloque de código en una función, ya que como esta se encuentra separada del código principal, nos permite testearlo y expurgarlo de cualquier tipo de error sin tener que preocuparnos de algún cambio en el principal.
