@@ -31,7 +31,7 @@ Los operadores aritméticos se utilizan para calcular el valor de dos o más nú
 
 #### Menos (-): calcula la negación numérica del operando.
 
-**1. Código:**
+**Código:**
   ```c#
   int x = 4;
   Console.WriteLine(-x);
@@ -40,18 +40,6 @@ Los operadores aritméticos se utilizan para calcular el valor de dos o más nú
 **Salida:**
   ```c#
   -4
-  ```
-
-**2. Código:**
-  ```c#
-  int x = 4;
-  int y = -x;
-  Console.WriteLine(y);
-  ```
-
-**Salida:**
-  ```c#
-  4
   ```
 
 ### Operadores binarios: multiplicación (*), división (/), resto (%), suma (+) y resta (-).
@@ -110,6 +98,8 @@ Los operadores aritméticos se utilizan para calcular el valor de dos o más nú
 
 Use **float**, **double** o **decimal** en ambos operadores para obtener el cociente de los dos operandos como número de punto flotante.
 
+<!--Agrega también para qué sirve cuando los operandos son cadenas.-->
+
 #### Suma (+): calcula la suma de sus operandos.
 
 **1. Código:**
@@ -126,13 +116,13 @@ Use **float**, **double** o **decimal** en ambos operadores para obtener el coci
 
 **2. Código:**
   ```c#
-  string word = "P6";
-  Console.WriteLine("Bienvenido a " + word);
+  string word = "C#";
+  Console.WriteLine("Bienvenido al curso de " + word);
   ```
 
 **Salida:**
   ```c#
-  Bienvenido a P6
+  Bienvenido al curso de C#
   ```
 
 Use el operador (+) para **concatenar cadenas** y **delegados**.
@@ -153,7 +143,7 @@ Use el operador (+) para **concatenar cadenas** y **delegados**.
 
 ## Operadores de asignación:
 
-Los operadores de asignación como su nombre lo dice asigna el valor de su operando derecho a una **variable**, **propiedad** o **elemento** de índice proporcionado por el operando izquierdo, como resultado se asigna el valor del operando izquierdo.
+Los operadores de asignación como su nombre lo indican asignan el valor de su operando derecho a una **variable**, **propiedad** o **elemento** de índice proporcionado por el operando izquierdo, como resultado se asigna el valor del operando izquierdo.
 
 #### Asignación simple (=): almacena el valor del segundo operando en el objeto especificado por el primer operando.
 
@@ -169,7 +159,7 @@ Los operadores de asignación como su nombre lo dice asigna el valor de su opera
   10
   ```
 
-#### Asignación compuesta: (*=): multiplica ambos valores de los operandos.
+#### Asignación compuesta: (*=): multiplica ambos valores de los operandos y asigna el resultado al primer operando.
 
 **Código:**
   ```c#
@@ -183,7 +173,7 @@ Los operadores de asignación como su nombre lo dice asigna el valor de su opera
   20
   ```
 
-#### Asignación de división (/=): divide ambos valores de los operandos.
+#### Asignación de división (/=): divide ambos valores de los operandos y asigna el resultado al primer operando.
 
 **Código:**
   ```c#
@@ -210,8 +200,9 @@ Los operadores de asignación como su nombre lo dice asigna el valor de su opera
   ```c#
   10
   ```
+Use el operador (-=) para especificar un **método de controlador de eventos**, cuando se trate de eliminar una baja de un evento.
 
-#### Asignación de suma (+=): divide ambos valores de los operandos.
+#### Asignación de suma (+=): suma ambos valores de los operandos.
 
 **Código:**
   ```c#
@@ -225,9 +216,11 @@ Los operadores de asignación como su nombre lo dice asigna el valor de su opera
   14
   ```
 
+Use el operador (+=) para especificar un **método de controlador de eventos**, cuando se trate de una suscripción de eventos.
+
 ## Operadores lógicos booleanos
 
-Los operadores lógicos booleanos son **palabras** o **símbolos** se utilizan para conectar de forma lógica conceptos o grupos de términos de tipo bool. 
+Los operadores lógicos booleanos son **palabras** o **símbolos** que se utilizan para realizar operaciones de forma lógica sobre sus operandos. 
 
 ### Operadores binarios (AND lógico condicional) y (OR lógico condicional).
 
@@ -235,13 +228,14 @@ Los operadores lógicos booleanos son **palabras** o **símbolos** se utilizan p
 
 **Código:**
   ```c#
-  bool x = false && SecondOperand();
-  Console.WriteLine(x);
+  bool x = true; 
+  bool y = true;
+  Console.WriteLine(x && y);
   ```
 
 **Salida:**
   ```c#
-  False
+  True
   ```
 
 Genera true, si x y y se evalúa como true, y false, si x se evalúa como true y y como false.
@@ -250,19 +244,17 @@ Genera true, si x y y se evalúa como true, y false, si x se evalúa como true y
 
 **Código:**
   ```c#
-  bool x = true || SecondOperand();
-  Console.WriteLine(x);
+  bool x = false; 
+  bool y = false;
+  Console.WriteLine(x || y);
   ```
 
 **Salida:**
   ```c#
-  True
+  False
   ```
-    
-Genera true, si x y y se evalúa como true, y false, si x se evalúa como true y y como false.
 
 Estos operadores evalúan el operando derecho sólo si es necesario.
-
 
 ### Operadores de igualdad: comprueban si los operadores son iguales.
 
@@ -294,12 +286,12 @@ Estos operadores evalúan el operando derecho sólo si es necesario.
   True
   ```
 
-#### Negación lógico (!): calcula la negación lógica de su operando.
+#### Negación lógica (!): calcula la negación lógica de su operando.
 
 **Código:**
   ```c#
-  bool passed = false;
-  Console.WriteLine(x !passed);
+  bool x = false;
+  Console.WriteLine(!x);
   ```
 
 **Salida:**
@@ -311,16 +303,23 @@ Genera true, si el operando se evalúa como false, y false, si el operando se ev
 
 ### Otros operaadores:
 
-#### Operador condicional (?:): evalúa uan expresión booleana y devuelve el resultado de las dos expresiones, dependiendo de si es true o false.
+#### Operador condicional o ternario (?:): evalúa una expresión booleana y devuelve el resultado de las dos expresiones, dependiendo de si se evalua como true o false.
 
 **Código:**
   ```c#
-  string GetWeatherDisplay(double tempInCelsius) => tempInCelsius < 20.0 ? "Cold." : "Perfect!";
+  int age = 17;
+  string message = string.Empty;
 
-  Console.WriteLine(GetWeatherDisplay(15));
+  if (age > 18)
+    message = "Eres legal";
+  else
+    message = "Eres ilegal";
+
+  message = age>18 ? "Eres legal" : "Eres ilegal";
+  Console.WriteLine(message);
   ```
 
 **Salida:**
   ```c#
-  Cold
+  Eres ilegal
   ```
