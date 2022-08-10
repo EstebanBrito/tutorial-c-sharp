@@ -6,14 +6,14 @@ En programación utilizamos bucles para iterar la ejecución de uno o varios blo
 
 El bucle más común es el bucle while, si la condición es verdadera el bloque de código se ejecutará en infinitas iteraciones mientras la condición sea verdadera, si es falsa se detendrá, por lo que el bucle while se utiliza cuando no se sabe exactamente la cantidad de veces que se va a iterar el bloque de código en cuestión.
 
-SÍNTAXIS:
+### SÍNTAXIS:
 ```C#
 while (condición)
 {
    // bloque de código que se ejecutará
 }
 ```
-EJEMPLO:
+### EJEMPLO:
 
 En el siguiente ejemplo el usuario va a una taquería para saciar su hambre comiendo tacos hasta que le indique que está satisfecho utilizando un "si" o "no" como respuesta, como extra se agregó un contador de tacos consumidos para contar la cantidad de iteraciones del bloque de código. 
 ```C#
@@ -54,7 +54,7 @@ namespace BucleWhile
 
 La sentencia do-while funciona prácticamente igual al while con la importante diferencia de que el *while* **primero** evalúa la condición y **después** ejecuta el bloque de código, el *do-while* lo hace alrevés, **primero** ejecuta el bloque de código y **después** evalúa la condición.
 
-SÍNTAXIS:
+### SÍNTAXIS:
 ```C#
 do
 {
@@ -62,7 +62,7 @@ do
 
 }while (condición);
 ```
-EJEMPLO:
+### EJEMPLO:
 
 El ejemplo es el mismo que el de while pero esta vez usando *do-while*.
 
@@ -102,7 +102,7 @@ namespace BucleWhile
 
 La sentencia de bucle *for* se suele utilizar cuando sabemos el número específico de iteraciones que necesitamos que se realicen dentro del bloque de código, declarando una **variable de inicialización**, un **límite de iteraciones** y un **contador incrementador o decrementador** como se muestra en la síntaxis más adelante.
 
-SÍNTAXIS:
+### SÍNTAXIS:
 
 ```C#
 for (int i = 0 ; i <= x; i++)
@@ -110,7 +110,7 @@ for (int i = 0 ; i <= x; i++)
     //bloque de código que se ejecutará
 }
 ```
-EJEMPLO:
+### EJEMPLO:
 En el siguiente ejemplo se utiliza la sentencia de bucle *for* para imprimir un texto **6** veces, la variable *i* empieza con valor cero y va aumentando su valor +1 por cada iteración del bloque de código hasta llegar hasta el *6*. 
 
 ```C#
@@ -143,7 +143,7 @@ foreach(tipoDato nombre in array)
 }
 ```
 
-EJEMPLO:
+### EJEMPLO:
 
 En el siguiente ejemplo se contará la cantidad de números dentro del arreglo de enteros "Numeros" por medio de un *foreach* y posteriormente se imprimirá.
 
@@ -202,7 +202,7 @@ En programación utilizamos variables llamadas *banderas* para marcar cuando una
 
 Funciona entre algunos ejemplos para marcar que se ha encontrado cierto elemento al barrer un arreglo o para marcar un error dentro del programa y poder programar una línea de acción para hacer que el código se realinie o como se muestra en el siguiente ejemplo: para que el usuario pueda salir de un bucle aparentemente infinito utilizando un símbolo clave.
 
-EJEMPLO:
+### EJEMPLO:
 
 En el siguiente ejemplo se hace una sumatoria con 2 números que se preguntan al usuario como strings que posteriormente se convierten en enteros y se suman, el bucle va a repetirse infinitamente hasta que el valor de la *bandera* sea verdadero, lo cual se logra si el usuario al final presiona la tecla z.
 ```C#
