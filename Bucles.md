@@ -64,7 +64,7 @@ do
 ```
 ### EJEMPLO:
 
-El ejemplo es el mismo que el de while pero esta vez usando *do-while*, la diferencia aquí es que el programa primero ejecutará el código dentro del bucle sin importar la repsuesta que se de, luego evaluará la condición para determinar si el do-while va a seguir iterando o no .
+El ejemplo es el mismo que el de while pero esta vez usando *do-while*, la diferencia aquí es que el programa primero ejecutará el código dentro del bucle sin importar la repsuesta que se de, luego evaluará la condición para determinar si el do-while va a seguir iterando o no.
 
 ```C#
 using System;
@@ -100,7 +100,7 @@ namespace BucleWhile
 ```
 ## Bucle for
 
-La sentencia de bucle *for* se suele utilizar cuando sabemos el número específico de iteraciones que necesitamos que se realicen dentro del bloque de código, declarando una **variable de inicialización**, un **límite de iteraciones** y un **contador incrementador o decrementador** como se muestra en la síntaxis más adelante.
+La sentencia de bucle *for* se suele utilizar cuando sabemos el número específico de iteraciones que necesitamos que se realicen dentro del bloque de código, declarando una **variable de inicialización** para dar un valor base a la variable que almacenará la cantidad de iteraciones, éste valor por lo general empieza con 0, un **límite de iteraciones** para indicar un valor que cuando sea alcanzado, el bloque de código se va a dejar de iterar y un **contador incrementador o decrementador** para llevar un control de cuantas unidades aumenta o decrementa el valor de la variable donde se almacena la cantidad de iteraciones realizadas como se muestra en la síntaxis más adelante.
 
 ### SÍNTAXIS:
 
@@ -111,7 +111,7 @@ for (int i = 0 ; i <= x; i++)
 }
 ```
 ### EJEMPLO:
-En el siguiente ejemplo se utiliza la sentencia de bucle *for* para imprimir un texto **6** veces, la variable *i* empieza con valor cero y va aumentando su valor +1 por cada iteración del bloque de código hasta llegar hasta el *6*. 
+En el siguiente ejemplo se utiliza la sentencia de bucle *for* para imprimir un texto **6** veces, la variable *i* (**variable de inicialización**, i=0) empieza con valor cero y va aumentando su valor +1 (**contador incrementador o decrementador**, i++) por cada iteración del bloque de código, hasta llegar a la *sexta* iteración (**límite de iteraciones**, i<6). 
 
 ```C#
 using System;
