@@ -1,6 +1,6 @@
 # Bucles en C#
 
-En programación utilizamos bucles para iterar la ejecución de uno o varios bloques de código dependiendo de una condición establecida según el tipo de bucle que se usa en el programa.
+En programación utilizamos bucles para iterar la ejecución de uno o varios bloques de código , el número de iteraciones es definido por una condición establecida dentro del programa, según el tipo de bucle que se está utilizando, como se mostrará más adelante en el blog.
 
 ## Bucle while
 
@@ -27,24 +27,24 @@ namespace BucleWhile
             //número de veces que se va a iterar el código dentro del while
             int TacosConsumidos = 0;
 
-            Console.WriteLine("tienes hambre?");
+            Console.WriteLine("¿Tienes hambre?");
 
             string respuesta = Console.ReadLine();
 
             //la condición es que siempre que el contenido del String "respuesta" sea "si" lo que está dentro de los corchetes del while seguirá iterando hasta que el usuario escriba otra cosa finalizando con el bucle
 
-            while (respuesta == "si") 
+            while (respuesta == "Si") 
             {
-                Console.WriteLine("*come un taco*");
+                Console.WriteLine("*Come un taco*");
 
                 TacosConsumidos++;
 
-                Console.WriteLine("deseas comer más?");
+                Console.WriteLine("¿Deseas comer más?");
                 respuesta = Console.ReadLine();
 
                 //aquí si el usuario escribió otra cosa que no haya sido si, el bucle terminará
             }
-            Console.WriteLine($"consumiste {TacosConsumidos} tacos");
+            Console.WriteLine($"Consumiste {TacosConsumidos} tacos");
         }
     }
     
