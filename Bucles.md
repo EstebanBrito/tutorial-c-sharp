@@ -64,7 +64,7 @@ do
 ```
 ### EJEMPLO:
 
-El ejemplo es el mismo que el de while pero esta vez usando *do-while*.
+El ejemplo es el mismo que el de while pero esta vez usando *do-while*, la diferencia aquí es que el programa primero ejecutará el código dentro del bucle sin importar la repsuesta que se de, luego evaluará la condición para determinar si el do-while va a seguir iterando o no .
 
 ```C#
 using System;
@@ -77,22 +77,22 @@ namespace BucleWhile
         {
             int TacosConsumidos = 0;
 
-            Console.WriteLine("tienes hambre?");
+            Console.WriteLine("¿Tienes hambre?");
 
             string respuesta = Console.ReadLine();
 
             //primero ejecutará el codigo incluso si la condición es falsa
             do
             {
-                Console.WriteLine("*come un taco*");
+                Console.WriteLine("*Come un taco*");
                 TacosConsumidos++;
-                Console.WriteLine("deseas comer más?");
+                Console.WriteLine("¿Deseas comer más?");
                 respuesta = Console.ReadLine();
             }
             //luego evalúa la condición para determinar si el do-while va a seguir iterando o no
-            while (respuesta == "si");
+            while (respuesta == "Si");
 
-            Console.WriteLine($"consumiste {TacosConsumidos} tacos");
+            Console.WriteLine($"Consumiste {TacosConsumidos} tacos");
         }
     }
     
