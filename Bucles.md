@@ -220,14 +220,13 @@ El programa imprimiría esto:
 11
 
 El programa imprime todos los números a excepción del 6, ya que como se menciona anteriormente, la iteración 6 es omitida por el continue.
-## banderas
-En programación utilizamos variables llamadas *banderas* para marcar cuando una posible situación prevista por el programador es verdadera o falsa, por lo que usualmente se usan variables de tipo booleano para declararlas.
 
-Funciona entre algunos ejemplos para marcar que se ha encontrado cierto elemento al barrer un arreglo o para marcar un error dentro del programa y poder programar una línea de acción para hacer que el código se realinie o como se muestra en el siguiente ejemplo: para que el usuario pueda salir de un bucle aparentemente infinito utilizando un símbolo clave.
+## banderas
+Una bandera es una variable lógica que se utiliza en el mundo de la programación para indicar que una condición es verdadera o falsa, permitiendo comunicar información de una parte del código a otra, para mantener un control dentro del código.
 
 ### EJEMPLO:
 
-En el siguiente ejemplo se hace una sumatoria con 2 números que se preguntan al usuario como strings que posteriormente se convierten en enteros y se suman, el bucle va a repetirse infinitamente hasta que el valor de la *bandera* sea verdadero, lo cual se logra si el usuario al final presiona la tecla z.
+En el siguiente ejemplo se multiplica un número por 2 un número que debe ingresar el usuario, el bucle va a repetirse infinitamente hasta que el valor de la *bandera* sea verdadero, lo cual se logra si el usuario al final presiona la tecla z.
 ```C#
 using System;
 
@@ -235,29 +234,25 @@ public class Program
 {
 	static void Main(string[] args)
 	{
-		int Num1, Num2, Suma;
+		int Num, Multi;
 		string cadena = string.Empty;
 		bool Bandera = false;
 
 		do
 		{
-			Console.WriteLine("Sumatoria, ingrese 2 números:)");
+			Console.WriteLine("ingrese un número para multiplicar por 2:)");
 
-			Console.WriteLine("Número 1:");
+			Console.WriteLine("Número:");
 			cadena = Console.ReadLine();
 			Console.WriteLine(cadena);
-			
-			Num1 = Convert.ToInt32(cadena);
+			Num = Convert.ToInt32(cadena);
 
-			Console.WriteLine("Número 2:");
-			cadena = Console.ReadLine();
-			Num2 = Convert.ToInt32(cadena);
+			Multi = Num * 2;
 
-
-			Suma = Num1 + Num2;
-			Console.WriteLine($"La suma es igual a {Suma}");
+			Console.WriteLine($"La multiplicación es igual a {Multi}");
 			Console.WriteLine("presione cualquier tecla para continuar | presione z para terminar");
 			cadena = Console.ReadLine();
+
 			if (cadena == "z")
 			{
 				Bandera = true;
@@ -268,6 +263,6 @@ public class Program
 
 	}
 
-	
+
 }
 ```
