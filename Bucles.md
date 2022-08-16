@@ -168,7 +168,7 @@ public class Program
 }
 ```
 ## Instrucción break
-La instrucción *break* se utiliza dentro de una sentencia de bucle para (como su nombre lo indica) **romper** su ejecución, en otras palabras: finaliza el proceso de manera forzosa, dependiendo de una condición previamente establecida.
+La instrucción *break* se utiliza dentro de una sentencia de bucle para (como su nombre lo indica) **romper** el bucle en cuestión, en otras palabras: finaliza el bucle de manera forzosa, ya sea con una condición previamente establecida o como un default para salir de un bucle.
 
 Como se muestra en el siguiente ejemplo que aumenta el valor de *i* en 1+ por cada iteración y dentro tiene una condicional que indica que si *i* es igual a 6 entonces el bucle se romperá:
 ```C#
@@ -182,6 +182,15 @@ for (int i = 0; i < 12; i++)
   Console.WriteLine(i);
 }
 ```
+El programa imprimiría esto:
+0
+1
+2
+3
+4
+5
+
+El programa terminaría de imprimir números en el 5 porque como se menciona anteriormente, el 6 provoca la interrupción del bucle.
 
 ## Instrucción continue
 La instrucción *continue* es similar a la instrucción *break*, solo que *continue* no finaliza con las iteraciones del bucle, solo "omite" la iteración en cuestión si la condicional es verdadera.
@@ -197,6 +206,20 @@ for (int i = 0; i < 12; i++)
   Console.WriteLine(i);
 }
 ```
+El programa imprimiría esto:
+0
+1
+2
+3
+4
+5
+7
+8
+9
+10
+11
+
+El programa imprime todos los números a excepción del 6, ya que como se menciona anteriormente, la iteración 6 es omitida por el continue.
 ## banderas
 En programación utilizamos variables llamadas *banderas* para marcar cuando una posible situación prevista por el programador es verdadera o falsa, por lo que usualmente se usan variables de tipo booleano para declararlas.
 
