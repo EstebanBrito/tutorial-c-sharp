@@ -1,16 +1,16 @@
-Delegados en C#
+Delegados en C
 =========
 
-## Definicion 
-
-Se define como un tipo que permite declarar una variable/argumentos que apunta a otro método; siendo esto una referencia a otro método cualquiera que sea **compatible**, encapsulandolo de forma segura.
+## Definición 
+###
+Los delegados son una referencia a un método con la finalidad de enviarlos como parámetros determinados a otros métodos. 
 
 > Un delegado es un objeto que contiene una referencia a un método. 
 
 <br>
+Hay que tener en cuenta algunas cosas acerca de los **delegados**:
 
-Hay que tener en cuenta algunas cosas acerca de los **delegados**
-* **compatible**: El método que apunta el delegado debe compartir el mismo tipo de retorno y tipo de parametros declarados previamente. No tienen que coincidir los nombres.
+* El método referenciado debe compartir el mismo tipo de valor y tipo de parametros declarados del delegado. No tienen que coincidir los nombres.
 * No es un método como tal, por lo tanto no tiene enunciados a ejecutar.
 * Puede ser declarado tanto fuera como dentro de una clase.
 
@@ -18,128 +18,57 @@ Hay que tener en cuenta algunas cosas acerca de los **delegados**
 
 ## Declaración
 
-Para crear un delegado es necesario utilizar la palabra clave ***delegate***, así como indicar cuáles son los parámetros y el tipo de retorno que se requiere, por ejemplo:
+Los delegados utilizan la palabra clave ***delegate***. Se debe indicar cuáles son los parámetros y el tipo de retorno que requiere, por ejemplo:
 
     <tipo de acceso> delegate <tipo de retorno> <nombre del método>(<parametros de entrada>) 
 
-Traducido en un ejemplo de código se expresa:
+Ejemplo de código:
 
     public delegate void mostrarDelegado(String valor);
 
-Realicemos un ejemplo para que quede más claro.
-
 ## Ejemplo
+       
+Declarando un objeto delegado:
+> `<nombre del delegado> <nombre del objeto> = <objeto de tipo clase>.<función>`
 
-Vamos a realizar la suma de dos números:
+Una vez declaro, prodecemos a realizar el llamado de la función con los valores asignados en el objeto del delegado.
 
-1. En una clase, declaremos un delegado de tipo entero con dos parametros del mismo. 
+```C
+class Programa
+{
+    //Delegado 
+    public delegate int Operar(int x1, int x2);
 
-        class Programa
-        {
-            //método delegado 
-            public delegate int Operar(int x1, int x2);
+    //función sumar 
+    public int sumar(int x, int y){
+        return x + y;
+    }
 
-            static void Main(string[] args){
-            }
-
-        }
-
-2. Creamos una función llamada "suma" que, como el método delegado, es de tipo entero y cuenta con dos atributos del mismo tipo, que nos devuelva la suma de las cantidades a recibir. 
-
-        class Programa
-        {
-            //método delegado 
-            public delegate int Operar(int x1, int x2);
-
-            //función sumar 
-            public int sumar(int x, int y){
-                return x + y;
-            }
-
-
-            static void Main(string[] args){
-            }
-
-        }
-
-    Como se menciono anteriormente, las funciones a las que el método delegado va a referenciar no requiere que tengan el mismo nombre en la función o en los parametros.
-
-3.  Ahora veremos la forma convencional del llamado de una función y en como llamara a traves del delegado. Recordemos que, para el llamado de una función es necesario crear un objeto
-
-    3.1 Forma convencional:
+    static void Main(string[] args){
         
-    + Con el objeto asignado, realizamos un llamado a la función "sumar" asignándole dos valores. 
+        //Creamos el objeto de clase
+        Programa objeto = new Programa();
 
-        
-            class Programa
-            {
-                //método delegado 
-                public delegate int Operar(int x1, int x2);
+        //Creamos objeto del delegado
+        Operar objDelegado = objeto.sumar;
 
-                //función sumar 
-                public int sumar(int x, int y){
-                    return x + y;
-                }
-
-
-                static void Main(string[] args){
-                    
-                    //Creamos el objeto de clase
-                    Programa objeto = new Programa();
-
-                    //Mandamos a llamar a la función con sus respectivos valores
-                    Console.WriteLine("La suma de los valores es: " + objeto.sumar(10, 5));
-            }
-    
-    <br>
-    
-    3.2 Forma delegado
-    + Así como un objeto, tenemos que definir un nuevo objeto del tipo delegar en el cual le agregamos la referencia de la función a utilizar. 
-        
-        Declarando un objeto delegado:
-        > `<nombre del delegado> <nombre del objeto> = <objeto de tipo clase>.<función>`
-
-        Una vez declaro, prodecemos a realizar el llamado de la función con los valores asignados en el objeto del delegado.
-
-            class Programa
-            {
-                //método delegado 
-                public delegate int Operar(int x1, int x2);
-
-                //función sumar 
-                public int sumar(int x, int y){
-                    return x + y;
-                }
-
-                static void Main(string[] args){
-                    
-                    //Creamos el objeto de clase
-                    Programa objeto = new Programa();
-
-                    //Creamos objeto del delegado
-                    Operar objDelegado = objeto.sumar;
-
-                    //Mandamos a llamar a la función con sus respectivos valores
-                    Console.WriteLine(La suma de los valores utilizando delegado es: " + delegado(10, 5));
-            }
+        //Mandamos a llamar a la función con sus respectivos valores
+        Console.WriteLine(La suma de los valores utilizando delegado es: " + objDelegado(10, 5));"
+    }
+}
+```
             
 4. Una vez ejecutado el programa, la salida de datos sera:
 
-    Forma convencional
-        
-        La suma de los valores es: 15 
-
-    Forma delegado
-
-        La suma de los valores utilizando delegado es: 15 
+    > La suma de los valores utilizando delegado es: 15 
 
 ***
 
-## Lamda
+## Funciones Lamda
 
 <br>
 
-Algo a tomar en cuenta es que los delegados que vayamos a crear pueden recibir un nombre, pero también existe opción de ser un **método anonimo**. Un tipo de delegado que permite pasar un bloque de código como parametro de un delegado creado. Pero ¿como llamar un método que no tiene nombre?
+Algo a tomar en cuenta es que los delegados que vayamos a crear pueden recibir un nombre, pero también existe opción de ser una **función anónima**. Un tipo de delegado que permite pasar un bloque de código como parametro de un delegado creado. Pero ¿como llamar una función que no tiene nombre?
 
 Las Expresiones *lambda* son funciónes anonimas que permiten enviar parametros a un método y ser efectuada en el mismo. De esta forma, puede realizar el llamado de una función de forma directa. 
 
@@ -166,34 +95,9 @@ Definamos como es la estructura de una expresión *lambda* común y como es apli
     Ejemplo aplicado con delegado para multiplicar dos valores:
 
         //Definimos un delegado
-        delegate in ejemploDelegado(int x, int y);
+        delegate int ejemploDelegado(int x, int y);
 
         //Delegado defido con expresión *lambda*
-        ejemnploDelegado objetoDelegado = (x, y) => x * y;
-
-## Ejemplo
-
-Si utilizamos la expresión anterior para obtener el descuento de un producto con forma *lambda* en una clase quedaría de la siguiente forma:
-
-        public class Program
-        {
-            
-            //Definimos el delegado
-            delegate double delegadoCalcular(double precio, double porcentajeDescuento);
-
-            public static void Main(string[] args){
-
-                //Creamos la función lambda con el delegado
-                delegadoCalcular calcularPrecio = (precio, descuento) => precio - (precio * descuento/100);
-
-                //Llamamos a la función
-                Console.WriteLine("El precio del artículo con su descuento es: " + calcularPrecio(100,25));
-            }
-        }
-
-Al ejecutar el código, mostrara el siguiente resultado
-
-    El precio del artículo con su descuento es: 75
-
+        ejemploDelegado objetoDelegado = (x, y) => x * y;
 
 Podemos notar que al aplicar las funciónes *lambda* con los delegados nos permiten reducir la sobrecarga de código, ya que se evita estar solo declarando objetos de tipo delegado, así como métodos independientes y logrando un mejor rendimiento. 
