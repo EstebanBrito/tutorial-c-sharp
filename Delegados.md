@@ -100,4 +100,5 @@ Definamos como es la estructura de una expresión *lambda* común y como es apli
         //Delegado defido con expresión *lambda*
         ejemploDelegado objetoDelegado = (x, y) => x * y;
 
+
 Podemos notar que al aplicar las funciónes *lambda* con los delegados nos permiten reducir la sobrecarga de código, ya que se evita estar solo declarando objetos de tipo delegado, así como métodos independientes y logrando un mejor rendimiento. 
